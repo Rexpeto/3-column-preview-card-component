@@ -1,3 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_darkcyan: hsl(179, 100%, 13%);
+    --White_Transpa: hsla(0, 0%, 100%, 0.75);
+    --Very_light: hsl(0, 0%, 95%);
+    --Primary_font: 'Lexend Deca', sans-serif;
+    --Second_font: 'Big Shoulders Display', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--Very_light);
+}
+
+/* Main */
+.main__container {
+    width: 325px;
+    border-radius: 8px;
+    margin: 87px auto 40px;
+    overflow: hidden;
+}
+
+article {
+    width: 100%;
+    height: 440px;
+    padding: 48px;
+}
+
+.sedan {
+    background-color: var(--Bright_orange);
+}
+
+.suvs {
+    background-color: var(--Dark_cyan);
+}
+
+.luxury {
+    background-color: var(--Very_darkcyan);
+}
+
+img {
+    margin-bottom: 36px;
+}
+
+.main__title {
+    font-family: var(--Second_font);
+    color: var(--Very_light);
+    font-weight: 700;
+    font-size: 2.4em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.main__text {
+    color: var(--White_Transpa);
+    font-family: var(--Primary_font);
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+button {
+    width: 148px;
+    height: 46px;
+    background-color: var(--Very_light);
+    border-style: none;
+    border-radius: 45px;
+    font-family: var(--Primary_font);
+    transition: background .3s;
+}
+
+button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.sedans__btn {
+    color: var(--Bright_orange);
+}
+
+.suvs__btn {
+    color: var(--Dark_cyan);
+}
+
+.lexury__btn {
+    color: var(--Very_darkcyan);
+}
+
 /* Header */
 .attribution { 
     font-size: 11px; text-align: center; 
@@ -5,4 +105,21 @@
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* Media Queries */
+/* >944px */
+@media only screen and (min-width: 944px) {
+    .main__container {
+        display: flex;
+        width: 924px;
+    }
+
+    article {
+        height: 500px;
+    }
+
+    .main__text {
+        margin-bottom: 80px;
+    }
 }
